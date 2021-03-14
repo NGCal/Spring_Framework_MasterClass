@@ -15,7 +15,10 @@ public class BinarySearch {
 
         int response = -1;
         //1:
-        BubbleSort sorter = new BubbleSort();
+//        if I want to use bubblesort I would have to change the code
+//        BubbleSort sorter = new BubbleSort();
+        QuickSort sorter = new QuickSort();
+
         int[] sortedArray = sorter.sort(listOfNumbers);
 
         //2: Magic search
