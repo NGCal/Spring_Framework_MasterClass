@@ -8,7 +8,12 @@ public class SpringIn10StepsApplication {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello");
+		//I have to defined what sort I want to use when I  create my BinarySearch object.
+		// If I want to change my sorting algorithm  I just have to change this line of the code.
+		BinarySearch bSearch = new BinarySearch(new BubbleSort());
+
+
+		System.out.println(bSearch.search(new int[]{15, 48, 9}, 3));
 
 		//SpringApplication.run(SpringIn10StepsApplication.class, args);
 	}

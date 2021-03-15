@@ -3,6 +3,12 @@ package com.training.springbasics.springin10steps;
 public class BinarySearch {
 
     /*MOCK CLASS WITH NOT ACTUAL IMPLEMENTATION*/
+    SortAlgorithm sortAlgorithm;
+
+    public BinarySearch(SortAlgorithm sortAlgorithm) {
+        this.sortAlgorithm = sortAlgorithm;
+    }
+
     public int search(int[] listOfNumbers, int number) {
 
         /*
@@ -15,9 +21,8 @@ public class BinarySearch {
 
         int response = -1;
         //1:
-//        if I want to use bubblesort I would have to change the code
-//        BubbleSort sorter = new BubbleSort();
-        QuickSort sorter = new QuickSort();
+//        The sort algorithm will be the one specified at the moment of instantiation of the class
+        SortAlgorithm sorter = this.sortAlgorithm;
 
         int[] sortedArray = sorter.sort(listOfNumbers);
 
