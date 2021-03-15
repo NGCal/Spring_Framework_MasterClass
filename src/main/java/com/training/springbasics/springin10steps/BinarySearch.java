@@ -1,5 +1,8 @@
 package com.training.springbasics.springin10steps;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class BinarySearch {
 
     /*MOCK CLASS WITH NOT ACTUAL IMPLEMENTATION*/
