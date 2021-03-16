@@ -52,4 +52,9 @@ public class BinarySearch {
     public void welcomeLog() {
         LOG.info("The BinarySearch Bean has been created");
     }
+
+    @PreDestroy
+    public void goodbyeLog() {
+        LOG.info("The BinarySearch bean will be destroy");
+    }
 }
