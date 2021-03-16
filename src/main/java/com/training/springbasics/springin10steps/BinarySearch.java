@@ -1,6 +1,7 @@
 package com.training.springbasics.springin10steps;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -8,10 +9,11 @@ public class BinarySearch {
 
     /*MOCK CLASS WITH NOT ACTUAL IMPLEMENTATION*/
     @Autowired
-    SortAlgorithm quickSort;
+    @Qualifier("Quick")
+    SortAlgorithm sortAlgorithm;
 
-    public BinarySearch(SortAlgorithm quickSort) {
-        this.quickSort = quickSort;
+    public BinarySearch(SortAlgorithm sortAlgorithm) {
+        this.sortAlgorithm = sortAlgorithm;
     }
 
     public int search(int[] listOfNumbers, int number) {
@@ -27,7 +29,7 @@ public class BinarySearch {
         int response = -1;
         //1:
 //        The sort algorithm will be the one specified at the moment of instantiation of the class
-        SortAlgorithm sorter = this.quickSort;
+        SortAlgorithm sorter = this.sortAlgorithm;
         System.out.println(sorter.getClass().getSimpleName());
 
         int[] sortedArray = sorter.sort(listOfNumbers);
