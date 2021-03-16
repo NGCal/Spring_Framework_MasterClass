@@ -1,12 +1,12 @@
 package com.training.springbasics.springin10steps;
 
+import com.training.springbasics.springin10steps.Basic.BinarySearch;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SpringIn10StepsApplication {
+public class SpringIn10StepsBasicApplication {
 
 	public static void main(String[] args) {
 
@@ -19,7 +19,7 @@ public class SpringIn10StepsApplication {
 //		BinarySearch bSearch = new BinarySearch(new BubbleSort());
 
 		//It's necessary define what's  the application context (Where to look for beans)
-		ApplicationContext applicationContext = SpringApplication.run(SpringIn10StepsApplication.class, args);
+		ApplicationContext applicationContext = SpringApplication.run(SpringIn10StepsBasicApplication.class, args);
 		BinarySearch bSearch = applicationContext.getBean(BinarySearch.class);
 		System.out.println(bSearch.search(new int[]{15, 48, 9}, 3));
 
