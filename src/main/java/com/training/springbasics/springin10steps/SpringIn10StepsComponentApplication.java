@@ -10,7 +10,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan("com.training.springbasics.Components")
+@ComponentScan({"com.training.springbasics.Components", "com.training.springbasics.springin10steps"})
 public class SpringIn10StepsComponentApplication {
 
 	//Logger
