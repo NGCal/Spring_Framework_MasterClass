@@ -8,4 +8,9 @@ public class QuickSort implements SortAlgorithm {
         //Sorting Magic
         return listOfNumbers;
     }
+
+    public int[] sort2(int[] listOfNumbers) {
+        //Sorting Magic
+        return listOfNumbers;
+    }
 }

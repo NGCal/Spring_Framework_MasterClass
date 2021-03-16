@@ -8,10 +8,10 @@ public class BinarySearch {
 
     /*MOCK CLASS WITH NOT ACTUAL IMPLEMENTATION*/
     @Autowired
-    SortAlgorithm sortAlgorithm;
+    SortAlgorithm quickSort;
 
-    public BinarySearch(SortAlgorithm sortAlgorithm) {
-        this.sortAlgorithm = sortAlgorithm;
+    public BinarySearch(SortAlgorithm quickSort) {
+        this.quickSort = quickSort;
     }
 
     public int search(int[] listOfNumbers, int number) {
@@ -27,7 +27,8 @@ public class BinarySearch {
         int response = -1;
         //1:
 //        The sort algorithm will be the one specified at the moment of instantiation of the class
-        SortAlgorithm sorter = this.sortAlgorithm;
+        SortAlgorithm sorter = this.quickSort;
+        System.out.println(sorter.getClass().getSimpleName());
 
         int[] sortedArray = sorter.sort(listOfNumbers);
 
