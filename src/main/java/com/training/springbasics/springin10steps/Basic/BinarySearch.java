@@ -1,8 +1,13 @@
 package com.training.springbasics.springin10steps.Basic;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 
 @Component
 public class BinarySearch {
@@ -11,6 +16,8 @@ public class BinarySearch {
     @Autowired
     @Qualifier("Quick")
     SortAlgorithm sortAlgorithm;
+
+    Logger LOG = LoggerFactory.getLogger(BinarySearch.class);
 
     public BinarySearch(SortAlgorithm sortAlgorithm) {
         this.sortAlgorithm = sortAlgorithm;
@@ -39,5 +46,10 @@ public class BinarySearch {
 
         return response;
 
+    }
+
+    @PostConstruct
+    public void welcomeLog() {
+        LOG.info("The BinarySearch Bean has been created");
     }
 }
